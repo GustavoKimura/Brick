@@ -133,6 +133,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tijolo (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4526590447883432928, guid: dc69d386379de124d97c39cf85b139d2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tijolo
+      objectReference: {fileID: 0}
     - target: {fileID: 4526590447883432929, guid: dc69d386379de124d97c39cf85b139d2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -207,6 +212,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tijolo (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526590447883432928, guid: dc69d386379de124d97c39cf85b139d2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tijolo
       objectReference: {fileID: 0}
     - target: {fileID: 4526590447883432929, guid: dc69d386379de124d97c39cf85b139d2,
         type: 3}
@@ -283,6 +293,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tijolo (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 4526590447883432928, guid: dc69d386379de124d97c39cf85b139d2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tijolo
+      objectReference: {fileID: 0}
     - target: {fileID: 4526590447883432929, guid: dc69d386379de124d97c39cf85b139d2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -357,8 +372,10 @@ GameObject:
   - component: {fileID: 197616167}
   - component: {fileID: 197616166}
   - component: {fileID: 197616168}
-  - component: {fileID: 197616169}
   - component: {fileID: 197616170}
+  - component: {fileID: 197616172}
+  - component: {fileID: 197616171}
+  - component: {fileID: 197616169}
   m_Layer: 0
   m_Name: Jogador
   m_TagString: Untagged
@@ -465,10 +482,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 197616165}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4a4f86cef0cd954a8a3c5c57156bcdf, type: 3}
+  m_Script: {fileID: 11500000, guid: 71d60b57df689fd42a82cf3593004e22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forca: 0.2
 --- !u!50 &197616170
 Rigidbody2D:
   serializedVersion: 4
@@ -490,6 +506,33 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &197616171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197616165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a422c0e559111814e93c2808d6727141, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vidas: 3
+  tamanho: 2
+  velocidade: 0.3
+--- !u!114 &197616172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197616165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9fda07d0e922404c9ff2b29dd888462, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &297830165
 GameObject:
   m_ObjectHideFlags: 0
@@ -501,8 +544,10 @@ GameObject:
   - component: {fileID: 297830167}
   - component: {fileID: 297830166}
   - component: {fileID: 297830169}
-  - component: {fileID: 297830168}
+  - component: {fileID: 297830171}
   - component: {fileID: 297830170}
+  - component: {fileID: 297830168}
+  - component: {fileID: 297830172}
   m_Layer: 0
   m_Name: Bola
   m_TagString: Untagged
@@ -574,27 +619,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &297830168
-Rigidbody2D:
-  serializedVersion: 4
+--- !u!114 &297830168
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 297830165}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2ad2e7347bbc634aacae5437b027b3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!58 &297830169
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -620,11 +656,45 @@ MonoBehaviour:
   m_GameObject: {fileID: 297830165}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5911c0717c8eb847bd881faec8ac60e, type: 3}
+  m_Script: {fileID: 11500000, guid: 22add538e7b258942a5b14ebedf00601, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidadeX: 0
-  velocidadeZ: 0
+  direcao: {x: 0, y: 1}
+  velocidade: 0.5
+  forca: 0.5
+--- !u!114 &297830171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297830165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acba72cb6684e2942bd9bf00c636e0c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &297830172
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297830165}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &298712958
 GameObject:
   m_ObjectHideFlags: 0
@@ -712,6 +782,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tijolo (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526590447883432928, guid: dc69d386379de124d97c39cf85b139d2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tijolo
       objectReference: {fileID: 0}
     - target: {fileID: 4526590447883432929, guid: dc69d386379de124d97c39cf85b139d2,
         type: 3}
@@ -867,6 +942,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tijolo (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 4526590447883432928, guid: dc69d386379de124d97c39cf85b139d2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tijolo
+      objectReference: {fileID: 0}
     - target: {fileID: 4526590447883432929, guid: dc69d386379de124d97c39cf85b139d2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -941,6 +1021,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tijolo (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526590447883432928, guid: dc69d386379de124d97c39cf85b139d2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tijolo
       objectReference: {fileID: 0}
     - target: {fileID: 4526590447883432929, guid: dc69d386379de124d97c39cf85b139d2,
         type: 3}
@@ -1177,6 +1262,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tijolo (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 4526590447883432928, guid: dc69d386379de124d97c39cf85b139d2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tijolo
+      objectReference: {fileID: 0}
     - target: {fileID: 4526590447883432929, guid: dc69d386379de124d97c39cf85b139d2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1251,6 +1341,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tijolo (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526590447883432928, guid: dc69d386379de124d97c39cf85b139d2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tijolo
       objectReference: {fileID: 0}
     - target: {fileID: 4526590447883432929, guid: dc69d386379de124d97c39cf85b139d2,
         type: 3}
@@ -1327,6 +1422,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tijolo (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 4526590447883432928, guid: dc69d386379de124d97c39cf85b139d2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tijolo
+      objectReference: {fileID: 0}
     - target: {fileID: 4526590447883432929, guid: dc69d386379de124d97c39cf85b139d2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1402,6 +1502,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tijolo (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 4526590447883432928, guid: dc69d386379de124d97c39cf85b139d2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tijolo
+      objectReference: {fileID: 0}
     - target: {fileID: 4526590447883432929, guid: dc69d386379de124d97c39cf85b139d2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1476,6 +1581,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tijolo (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526590447883432928, guid: dc69d386379de124d97c39cf85b139d2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tijolo
       objectReference: {fileID: 0}
     - target: {fileID: 4526590447883432929, guid: dc69d386379de124d97c39cf85b139d2,
         type: 3}
@@ -1651,6 +1761,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tijolo (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4526590447883432928, guid: dc69d386379de124d97c39cf85b139d2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tijolo
+      objectReference: {fileID: 0}
     - target: {fileID: 4526590447883432929, guid: dc69d386379de124d97c39cf85b139d2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1725,6 +1840,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tijolo (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526590447883432928, guid: dc69d386379de124d97c39cf85b139d2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tijolo
       objectReference: {fileID: 0}
     - target: {fileID: 4526590447883432929, guid: dc69d386379de124d97c39cf85b139d2,
         type: 3}
@@ -1801,6 +1921,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Parede (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1785004060490005028, guid: b23ec7f1e39021148adb8fb8b0f45064,
+        type: 3}
+      propertyPath: m_TagString
+      value: Parede
+      objectReference: {fileID: 0}
     - target: {fileID: 1785004060490005031, guid: b23ec7f1e39021148adb8fb8b0f45064,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1876,6 +2001,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tijolo (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 4526590447883432928, guid: dc69d386379de124d97c39cf85b139d2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tijolo
+      objectReference: {fileID: 0}
     - target: {fileID: 4526590447883432929, guid: dc69d386379de124d97c39cf85b139d2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1950,6 +2080,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tijolo (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526590447883432928, guid: dc69d386379de124d97c39cf85b139d2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tijolo
       objectReference: {fileID: 0}
     - target: {fileID: 4526590447883432929, guid: dc69d386379de124d97c39cf85b139d2,
         type: 3}
@@ -2091,6 +2226,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Parede (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1785004060490005028, guid: b23ec7f1e39021148adb8fb8b0f45064,
+        type: 3}
+      propertyPath: m_TagString
+      value: Parede
+      objectReference: {fileID: 0}
     - target: {fileID: 1785004060490005031, guid: b23ec7f1e39021148adb8fb8b0f45064,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2165,6 +2305,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tijolo (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526590447883432928, guid: dc69d386379de124d97c39cf85b139d2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tijolo
       objectReference: {fileID: 0}
     - target: {fileID: 4526590447883432929, guid: dc69d386379de124d97c39cf85b139d2,
         type: 3}
@@ -2241,6 +2386,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tijolo (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 4526590447883432928, guid: dc69d386379de124d97c39cf85b139d2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tijolo
+      objectReference: {fileID: 0}
     - target: {fileID: 4526590447883432929, guid: dc69d386379de124d97c39cf85b139d2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2315,6 +2465,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tijolo (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526590447883432928, guid: dc69d386379de124d97c39cf85b139d2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tijolo
       objectReference: {fileID: 0}
     - target: {fileID: 4526590447883432929, guid: dc69d386379de124d97c39cf85b139d2,
         type: 3}
@@ -2391,6 +2546,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tijolo (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 4526590447883432928, guid: dc69d386379de124d97c39cf85b139d2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tijolo
+      objectReference: {fileID: 0}
     - target: {fileID: 4526590447883432929, guid: dc69d386379de124d97c39cf85b139d2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2465,6 +2625,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tijolo (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526590447883432928, guid: dc69d386379de124d97c39cf85b139d2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tijolo
       objectReference: {fileID: 0}
     - target: {fileID: 4526590447883432929, guid: dc69d386379de124d97c39cf85b139d2,
         type: 3}
@@ -2607,6 +2772,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tijolo (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 4526590447883432928, guid: dc69d386379de124d97c39cf85b139d2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tijolo
+      objectReference: {fileID: 0}
     - target: {fileID: 4526590447883432929, guid: dc69d386379de124d97c39cf85b139d2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2681,6 +2851,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tijolo (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526590447883432928, guid: dc69d386379de124d97c39cf85b139d2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tijolo
       objectReference: {fileID: 0}
     - target: {fileID: 4526590447883432929, guid: dc69d386379de124d97c39cf85b139d2,
         type: 3}
@@ -2757,6 +2932,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tijolo (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 4526590447883432928, guid: dc69d386379de124d97c39cf85b139d2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tijolo
+      objectReference: {fileID: 0}
     - target: {fileID: 4526590447883432929, guid: dc69d386379de124d97c39cf85b139d2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2831,6 +3011,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tijolo (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526590447883432928, guid: dc69d386379de124d97c39cf85b139d2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tijolo
       objectReference: {fileID: 0}
     - target: {fileID: 4526590447883432929, guid: dc69d386379de124d97c39cf85b139d2,
         type: 3}
@@ -2907,6 +3092,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tijolo (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 4526590447883432928, guid: dc69d386379de124d97c39cf85b139d2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tijolo
+      objectReference: {fileID: 0}
     - target: {fileID: 4526590447883432929, guid: dc69d386379de124d97c39cf85b139d2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2981,6 +3171,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tijolo (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526590447883432928, guid: dc69d386379de124d97c39cf85b139d2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tijolo
       objectReference: {fileID: 0}
     - target: {fileID: 4526590447883432929, guid: dc69d386379de124d97c39cf85b139d2,
         type: 3}
@@ -3179,6 +3374,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tijolo (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 4526590447883432928, guid: dc69d386379de124d97c39cf85b139d2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tijolo
+      objectReference: {fileID: 0}
     - target: {fileID: 4526590447883432929, guid: dc69d386379de124d97c39cf85b139d2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3253,6 +3453,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tijolo (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526590447883432928, guid: dc69d386379de124d97c39cf85b139d2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tijolo
       objectReference: {fileID: 0}
     - target: {fileID: 4526590447883432929, guid: dc69d386379de124d97c39cf85b139d2,
         type: 3}
@@ -3362,6 +3567,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tijolo (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 4526590447883432928, guid: dc69d386379de124d97c39cf85b139d2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tijolo
+      objectReference: {fileID: 0}
     - target: {fileID: 4526590447883432929, guid: dc69d386379de124d97c39cf85b139d2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3436,6 +3646,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tijolo (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526590447883432928, guid: dc69d386379de124d97c39cf85b139d2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tijolo
       objectReference: {fileID: 0}
     - target: {fileID: 4526590447883432929, guid: dc69d386379de124d97c39cf85b139d2,
         type: 3}
@@ -3512,6 +3727,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tijolo (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 4526590447883432928, guid: dc69d386379de124d97c39cf85b139d2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tijolo
+      objectReference: {fileID: 0}
     - target: {fileID: 4526590447883432929, guid: dc69d386379de124d97c39cf85b139d2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3587,6 +3807,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tijolo (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 4526590447883432928, guid: dc69d386379de124d97c39cf85b139d2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tijolo
+      objectReference: {fileID: 0}
     - target: {fileID: 4526590447883432929, guid: dc69d386379de124d97c39cf85b139d2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3661,6 +3886,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Parede (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1785004060490005028, guid: b23ec7f1e39021148adb8fb8b0f45064,
+        type: 3}
+      propertyPath: m_TagString
+      value: Parede
       objectReference: {fileID: 0}
     - target: {fileID: 1785004060490005031, guid: b23ec7f1e39021148adb8fb8b0f45064,
         type: 3}
@@ -3746,6 +3976,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tijolo (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526590447883432928, guid: dc69d386379de124d97c39cf85b139d2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tijolo
       objectReference: {fileID: 0}
     - target: {fileID: 4526590447883432929, guid: dc69d386379de124d97c39cf85b139d2,
         type: 3}
@@ -3901,6 +4136,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tijolo (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 4526590447883432928, guid: dc69d386379de124d97c39cf85b139d2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tijolo
+      objectReference: {fileID: 0}
     - target: {fileID: 4526590447883432929, guid: dc69d386379de124d97c39cf85b139d2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3975,6 +4215,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tijolo (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526590447883432928, guid: dc69d386379de124d97c39cf85b139d2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tijolo
       objectReference: {fileID: 0}
     - target: {fileID: 4526590447883432929, guid: dc69d386379de124d97c39cf85b139d2,
         type: 3}
