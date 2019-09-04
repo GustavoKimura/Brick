@@ -6,16 +6,16 @@ public class BolaModel: MonoBehaviour {
 
     public Vector2 Direcao {
         get => direcao;
-        set => this.direcao = value;
+        set => direcao = value;
     }
 
     public float Velocidade {
         get => velocidade;
-        set => this.velocidade = value;
+        set => velocidade = value;
     }
 
     public float Forca {
         get => forca;
-        set => this.forca = value;
+        set => forca = value;
     }
 }

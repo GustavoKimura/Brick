@@ -14,7 +14,7 @@ public class TijoloController: MonoBehaviour {
     public void receberDano(int dano) {
         this.tijoloModel.Vida -= dano;
 
-        if(this.tijoloModel.Vida == 0) {
+        if(this.tijoloModel.Vida <= 0) {
             Destroy(this.gameObject);
         }
     }
