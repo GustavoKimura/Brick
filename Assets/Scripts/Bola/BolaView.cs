@@ -14,10 +14,10 @@ public class BolaView: MonoBehaviour {
             tijoloView.invocarReceberDano(1);
         }
 
-        if(collision.gameObject.tag == "Parede") {
-            bolaController.invocarRefletir(collision);
+        if(collision.gameObject.tag == "Jogador") {
+            bolaController.mudarAngulo(bolaController.calcularReflexao(collision));
         } else {
-            bolaController.invocarRefletir(collision);   
+            bolaController.invocarRefletir(collision);  
         }
     }
 }
