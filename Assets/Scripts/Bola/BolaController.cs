@@ -4,11 +4,18 @@ public class BolaController: MonoBehaviour {
     private BolaModel bolaModel;
     private Rigidbody2D rigidbody2d;
 
-    void Start() {
-         bolaModel =  GetComponent<BolaModel>();
-         rigidbody2d =  GetComponent<Rigidbody2D>();
+    private void Start() {
+        bolaModel = GetComponent<BolaModel>();
+        rigidbody2d = GetComponent<Rigidbody2D>();
+    }
 
-         rigidbody2d.velocity =  bolaModel.Direcao *  bolaModel.Velocidade;
+    public void iniciarJogo() {
+        rigidbody2d.velocity = bolaModel.Direcao * bolaModel.Velocidade;
+    }
+
+    public void reiniciarJogo() {
+        this.bolaModel.Direcao = new Vector2(this.bolaModel.Direcao.x, this.bolaModel.Direcao.y * -1);
+        rigidbody2d.velocity = new Vector2(0, 0);
     }
 
     public void mudarAngulo(Vector2 direcao) {

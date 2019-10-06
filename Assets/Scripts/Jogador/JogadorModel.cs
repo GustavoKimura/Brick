@@ -1,7 +1,19 @@
 ﻿using UnityEngine;
 
 public class JogadorModel: MonoBehaviour {
+    [SerializeField] private string nome;
+    [SerializeField] private int jogadasEfetuadas;
     [SerializeField] private float vidas, tamanho, velocidade;
+
+    public string Nome {
+        get => nome;
+        set => this.nome = value;
+    }
+
+    public int JogadasEfetuadas {
+        get => jogadasEfetuadas;
+        set => this.jogadasEfetuadas = value;
+    }
 
     public float Vidas {
         get => vidas;
