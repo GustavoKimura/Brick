@@ -51,6 +51,7 @@ public class BolaView: MonoBehaviour {
             tijoloView.invocarReceberDano(1);
 
             if(this.tijolos.transform.childCount <= 1) {
+                this.bolaController.reiniciarJogo();
                 this.textoFimDeJogo.text = "Você venceu!";
                 this.jogadasEfetuadas.text = "Jogadas efetuadas: " + Configuracoes.jogador.JogadasEfetuadas;
                 this.painelFimDeJogo.SetActive(true);

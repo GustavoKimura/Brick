@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\Jogador\JogadorController.cs" />
     <Compile Include="Assets\Scripts\Jogador\JogadorModel.cs" />
     <Compile Include="Assets\Scripts\Jogador\JogadorView.cs" />
+    <Compile Include="Assets\Scripts\NaoDestruir.cs" />
     <Compile Include="Assets\Scripts\Tijolo\TijoloController.cs" />
     <Compile Include="Assets\Scripts\Tijolo\TijoloModel.cs" />
     <Compile Include="Assets\Scripts\Tijolo\TijoloView.cs" />
@@ -275,14 +276,14 @@
     <Reference Include="Vuforia.UnityExtensions">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.1f1/Editor/Data/PlaybackEngines/VuforiaSupport/Managed/Runtime/Vuforia.UnityExtensions.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Users/Gustavo/Desktop/Brick/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
+    <Reference Include="Unity.Analytics.Editor">
+      <HintPath>C:/Users/Gustavo/Desktop/Brick/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
       <HintPath>C:/Users/Gustavo/Desktop/Brick/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Users/Gustavo/Desktop/Brick/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
+    <Reference Include="Unity.Analytics.Tracker">
+      <HintPath>C:/Users/Gustavo/Desktop/Brick/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.1f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

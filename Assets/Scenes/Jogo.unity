@@ -2166,6 +2166,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1129558416}
     m_Modifications:
+    - target: {fileID: -1586362307872386718, guid: dc69d386379de124d97c39cf85b139d2,
+        type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1586362307872386718, guid: dc69d386379de124d97c39cf85b139d2,
+        type: 3}
+      propertyPath: lengthInSec
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1586362307872386718, guid: dc69d386379de124d97c39cf85b139d2,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -1586362307872386718, guid: dc69d386379de124d97c39cf85b139d2,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1586362307872386718, guid: dc69d386379de124d97c39cf85b139d2,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4526590447883432928, guid: dc69d386379de124d97c39cf85b139d2,
         type: 3}
       propertyPath: m_Name
